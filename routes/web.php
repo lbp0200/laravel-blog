@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Route::any('/login','Auth\LoginController@' );
+//Auth::routes();
+Route::get('profile', function () {
+    // Only authenticated users may enter...
+})->middleware('auth.basic');
+//Route::get('/home', 'HomeController@index')->name('home');
